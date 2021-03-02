@@ -10,4 +10,4 @@ Check if csv with ec2 instances is running
 * source bin/activate
 * pip install -r requirements.txt
 * change somefile.csv in tag.py to your file
-* ./tag.py
+* ./ec2check.py
