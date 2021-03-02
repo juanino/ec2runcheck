@@ -25,9 +25,12 @@ with open('somefile.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     line_count = 0
     for row in csv_reader:
+        # debug only
         #pp.pprint(row)
-        # assumes 10 items, we only care about the first 3
-        (instance,name,service,d,e,f,g,h,l,q) = row
+
+        # grab first 2 columns
+        # instance,name
+        (instance,name) = row[:2]
         line_count += 1
         check_running(instance,name)
     print(f'Processed {line_count} lines.')
